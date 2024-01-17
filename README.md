@@ -16,5 +16,7 @@
    - A single linked list is made up of nodes containing:
      - Data: Contains the actual data.
      - Link: Contains the address of the next node in the list.
+     
+![Single Linked List](/assets/linkedList/singleLinkedList.png)
 
-<img width="555" alt="singleLinkedList" src="https://github.com/imtiajahammad/dataStructurePractice/assets/27946257/27cbbb3d-f47c-4a51-8356-6d533cd9e206">
+<img width="555" alt="singleLinkedList" src="/Users/imtiajahammad/Development/dotnetCore/dataStructurePractice/assets/linkedList/singleLinkedList.png">
