@@ -15,3 +15,13 @@
 <p align="center">
   <img width="555" alt="Single Linked List" src="/assets/linkedList/singleLinkedList.png">
 </p>
+
+
+
+
+
+
+
+#### References:
+  - https://www.youtube.com/watch?v=Hj_rA0dhr2I&t=2589s&ab_channel=freeCodeCamp.org
+  - another link
