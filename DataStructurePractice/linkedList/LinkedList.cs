@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 namespace DataStructurePractice.linkedList;
 
 public class LinkedList
@@ -10,6 +9,7 @@ public class LinkedList
 
     public LinkedList()
     {
+    #region singleLinkedList
     //SingleNode<int> firstNode = new SingleNode<int>(){ Data = 10, Link = null};
     //SingleLinkedList<int> obj = new SingleLinkedList<int>();
     //obj.Traverse();
@@ -82,9 +82,25 @@ public class LinkedList
     SingleNode<int> tempNodeFor7 = new SingleNode<int>(){ Data = 7, Link = tempNodeFor8 };
 
     SingleLinkedList<int> demoForTestZipperList = new SingleLinkedList<int>(){ Head =tempNode1};
-    demoForTestZipperList.ZipperListWithRecursion(demoForTestZipperList.Head,tempNodeFor7);
-    demoForTestZipperList.TraverseWithRecursion(demoForTestZipperList.Head);
-
+    //demoForTestZipperList.ZipperListWithRecursion(demoForTestZipperList.Head,tempNodeFor7);
+    //demoForTestZipperList.TraverseWithRecursion(demoForTestZipperList.Head);
+    #endregion singleLinkedList
+    
+    #region doublyLinkedList
+    DoublyNode<int> nodeFor9 = new DoublyNode<int>(){ PreviousLink = null, Data = 9, NextLink = null };
+    DoublyNode<int> nodeFor8 = new DoublyNode<int>(){ PreviousLink = null, Data = 8, NextLink = nodeFor9 };
+    nodeFor9.PreviousLink = nodeFor8;
+    DoublyNode<int> nodeFor7 = new DoublyNode<int>(){ PreviousLink = null, Data = 7, NextLink = nodeFor8 };
+    nodeFor8.PreviousLink = nodeFor7;
+    DoublyNode<int> nodeFor6 = new DoublyNode<int>(){ PreviousLink = nodeFor9, Data = 6, NextLink= nodeFor7};
+    nodeFor7.PreviousLink = nodeFor6;
+    nodeFor9.NextLink = nodeFor6;
+    DoublyLinkedList<int> doublyLinkedList = new DoublyLinkedList<int>(){Head = nodeFor6 };
+    DoublyNode<int> nodeFor0 = new DoublyNode<int>(){ PreviousLink = null, Data = 0, NextLink = null };
+    doublyLinkedList.Add(nodeFor0);
+    doublyLinkedList.Traverse();
+    doublyLinkedList.Find(9);
+    #endregion doublyLinkedList
     }
     
 }
